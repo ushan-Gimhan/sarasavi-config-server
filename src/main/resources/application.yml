@@ -6,14 +6,17 @@ spring:
     name: config-server
 
   profiles:
-    active: native
+    active: git
 
   cloud:
     config:
       server:
         git:
           uri: https://github.com/ushan-Gimhan/sarasavi-configurations.git
-          search-paths: platform/services
+          default-label: main
+          clone-on-start: true
+          timeout: 10
+          force-pull: true
 
         native:
           search-locations: classpath:/config-repo
