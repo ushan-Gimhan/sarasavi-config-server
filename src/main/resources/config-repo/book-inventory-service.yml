@@ -1,0 +1,13 @@
+server:
+  port: 8081
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://ushangimhan_db_user:Rd5anBTtkiDginpl@sarasavi-bookshop.57lpqm5.mongodb.net/?appName=sarasavi-bookshop
+      database: ${MONGODB_DATABASE:sarasavi_inventory}
+
+logging:
+  level:
+    lk.sarasavi: DEBUG
+    org.springframework.data.mongodb: INFO
